@@ -1,12 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Tabs } from 'ionic-angular';
 
-/**
- * Generated class for the DashboardTabsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +9,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DashboardTabsPage {
 
+  tab1 = 'SettingPage';
+  tab2 = 'ProfilePage';
+
+  @ViewChild('myTabs') tabsRef: Tabs;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DashboardTabsPage');
+    let openTab = this.navParams.get('openTab');
+    if(openTab){
+      this.tabsRef.select(openTab);
+    }
   }
 
 }

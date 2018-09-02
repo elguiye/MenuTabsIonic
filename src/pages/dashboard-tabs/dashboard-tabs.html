@@ -1,16 +1,13 @@
-
 <ion-header>
-
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>dashboardTabs</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
-<ion-content padding>
-
-</ion-content>
+<ion-tabs #myTabs>
+  <ion-tab tabTitle="Setting" [root]="tab1" tabIcon="settings"></ion-tab>
+  <ion-tab tabTitle="Profile" [root]="tab2" tabIcon="person"></ion-tab>
+</ion-tabs>

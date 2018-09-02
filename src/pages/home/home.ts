@@ -1,8 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Nav } from 'ionic-angular';
-import { DashboardTabsPage } from '../dashboard-tabs/dashboard-tabs';
-import { ListsTabsPage } from '../lists-tabs/lists-tabs';
-import { NoTabsPage } from '../no-tabs/no-tabs';
 
 @Component({
   selector: 'page-home',
