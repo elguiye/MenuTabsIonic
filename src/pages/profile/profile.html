@@ -10,5 +10,11 @@
 
 
 <ion-content padding>
+  Profile
 
+  <ion-list>
+    <button ion-item *ngFor="let film of (films | async)?.results" (click)="openDetails(film)">
+      {{ film.title }}
+    </button>
+  </ion-list>
 </ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "menutabs",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
